@@ -1,0 +1,31 @@
+---
+layout: 'base.njk'
+---
+<!-- Blog post -->
+<section class="blog-post section-header-offset">
+    <div class="blog-post-container container">
+        <div class="blog-post-data">
+            <h3 class="title blog-post-title">{{ title }}</h3>
+            <div class="article-data">
+                <span>{{ date | postDate }}</span>
+                <span class="article-data-spacer"></span>
+                <span>{{ author }}</span>
+            </div>
+
+            <img src="{{ image }}" alt="{{ imageAlt }}">
+        </div>
+    
+    <div class="container">
+             {{ content |safe }}
+    </div>
+ 
+{% include 'author.njk' %}
+        
+        </div>
+    </div>
+</section>
+
+<!-- Swiper.js -->
+<script src="./assets/js/swiper-bundle.min.js"></script>
+<!-- Custom script -->
+<script src="./assets/js/main.js"></script>
