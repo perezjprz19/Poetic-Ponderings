@@ -12,7 +12,9 @@
     <!-- Swiper.js styles -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
     <!-- Custom styles -->
-    <link  rel="stylesheet" type = "text/css" href="/assets/css/main.css">   
+    <link  rel="stylesheet" type = "text/css" href="/assets/css/main.css">  
+    <!--Allows user to log in with Netlify Identity widget--> 
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
 <body>
@@ -23,6 +25,21 @@
 
     </main>
     {% include 'footer.njk' %}
+
+
+
+<!--Adds CMS Panel redirect after log in-->
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
