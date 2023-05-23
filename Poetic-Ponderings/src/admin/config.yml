@@ -2,12 +2,12 @@ backend:
   name: git-gateway
   branch: distribution
 # publish_mode: editorial_workflow
-media_folder: "public/assets/images"
-public_folder: "/assets/images"
+media_folder: "Poetic-Ponderings/src/assets/images"
+public_folder: "Poetic-Ponderings/public/assets/images"
 collections: 
   - name: "post"
     label: "Post"
-    folder: "src/poetry"
+    folder: "Poetic-Ponderings/src/poetry"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields: 
