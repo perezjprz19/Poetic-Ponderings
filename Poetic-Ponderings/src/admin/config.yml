@@ -2,6 +2,7 @@ backend:
   name: git-gateway
   branch: distribution
 # publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 media_folder: "Poetic-Ponderings/public/assets/images"
 public_folder: "/assets/images"
 collections: 
