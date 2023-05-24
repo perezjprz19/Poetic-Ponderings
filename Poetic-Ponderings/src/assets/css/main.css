@@ -844,11 +844,6 @@ body.light-theme {
         display: none;    }
 }
 
-   /* Fancy button animation effect */
-
-.btn.fancy-border:hover::before {
-    animation: animate_border .75s linear infinite
-}
 
 /* 
 .featured-articles-container {
