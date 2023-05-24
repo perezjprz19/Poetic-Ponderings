@@ -769,10 +769,6 @@ body.light-theme {
         align-items: center;
     }
 
-    .company-data {
-        order: 0;
-    }
-
     .author{
         grid-template-columns: 25rem 1fr;
     }
@@ -783,6 +779,12 @@ body.light-theme {
 
 .featured-articles-container {
     grid-template-columns: 1fr 1fr;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 }
@@ -844,11 +846,6 @@ body.light-theme {
         display: none;    }
 }
 
-   /* Fancy button animation effect */
-
-.btn.fancy-border:hover::before {
-    animation: animate_border .75s linear infinite
-}
 
 /* 
 .featured-articles-container {
@@ -865,16 +862,20 @@ body.light-theme {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.footer-container {
-    grid-template-columns: repeat(5, 1fr);
-}
+/* .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+
+} */
 
 .company-data{
     grid-column:  span 2;
+    align-items:center;
+
 }
 
 .company-description {
-    max-width: 85%;
+    max-width: 100%;
+   text-align: center;
 }
 
 .copyright-notice {
