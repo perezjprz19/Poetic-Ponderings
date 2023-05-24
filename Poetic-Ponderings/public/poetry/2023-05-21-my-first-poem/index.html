@@ -12,7 +12,9 @@
     <!-- Swiper.js styles -->
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css"/>
     <!-- Custom styles -->
-    <link  rel="stylesheet" type = "text/css" href="/assets/css/main.css">   
+    <link  rel="stylesheet" type = "text/css" href="/assets/css/main.css">  
+    <!--Allows user to log in with Netlify Identity widget--> 
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
 <body>
@@ -49,12 +51,6 @@
                 <li class="list-item">
                     <a href="#" class="list-link">Contact</a>
                 </li>
-                <li class="list-item">
-                    <a href="#" class="list-link screen-lg-hidden">Sign In</a>
-                </li>
-                <li class="list-item">
-                    <a href="#" class="list-link screen-lg-hidden">Sign Up</a>
-                </li>
             </ul>
             </div>
 
@@ -73,11 +69,6 @@
                     <i class="ri-menu-3-line open-menu-icon"></i>
                     <i class="ri-close-line close-menu-icon"></i>
                 </button>
-
-                <a href="#" class="list-link screen-sm-hidden">Sign In</a>
-                <a href="#" class="list-link screen-sm-hidden btn sign-up-btn fancy-border">
-                    <span>Sign Up</span>
-                </a>
             </div>
         </nav>
     </header>
@@ -117,24 +108,7 @@
         </div>
     
     <div class="container">
-             <p><p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ea voluptatem ipsum, at aut officia
-voluptas quidem nostrum quibusdam sapiente placeat perspiciatis, iusto totam repellat qui quas amet
-itaque et.</p></p>
-<p><p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ea voluptatem ipsum, at aut officia
-voluptas quidem nostrum quibusdam sapiente placeat perspiciatis, iusto totam repellat qui quas amet
-itaque et.</p></p>
-<p><blockquote class="quote">
-<p>
-<span>
-<i class="ri-double-quotes-l"></i>
-</span>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ea voluptatem ipsum, at aut
-officia voluptas quidem nostrum
-<span> <i class="ri-double-quotes-r"></span></i>
-</p>
-</blockquote></p>
-<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ea voluptatem ipsum, at aut officia
-voluptas quidem nostrum quibusdam sapiente placeat perspiciatis, iusto totam repellat qui quas amet
-itaque et.</p>
+             <p><strong>Hello, how are you?</strong></p>
 
     </div>
  
@@ -304,6 +278,21 @@ itaque et.</p>
 
         </div>
     </footer>
+
+
+
+<!--Adds CMS Panel redirect after log in-->
+    <script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
 
 </body>
 </html>
