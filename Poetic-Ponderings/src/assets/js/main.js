@@ -1,4 +1,5 @@
 // Grab elements
+
 const selectElement = selector => {
     const element = document.querySelector(selector)
     if(element) return element;

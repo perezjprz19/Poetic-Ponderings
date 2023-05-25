@@ -408,6 +408,7 @@ body.light-theme {
 
 .article-title {
     font-size: var(--font-size-md);
+    text-align: center;
 }
 /* Featured articles - Sidebar */
 .sidebar{
@@ -785,6 +786,11 @@ body.light-theme {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+}
+
+.featured-articles-container {
+    grid-template-columns: 2fr 1fr;
+
 }
 
 }
