@@ -1,15 +1,14 @@
 ---
-title: My Fifth Poem
+title: My Fourth Poem
 author: Ember R.
-articleNumber: 05
-date: 2023-05-25
-tags: post
-image: /assets/images/trending/trending_5.jpg
+articleNumber: 04
+date: 2023-05-24
+tags: recent
+image: /assets/images/trending/trending_4.jpg
 imageAlt: This is a test
 ---
 
-
-                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ea voluptatem ipsum, at aut officia
+     <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ea voluptatem ipsum, at aut officia
                 voluptas quidem nostrum quibusdam sapiente placeat perspiciatis, iusto totam repellat qui quas amet
                 itaque et.</p>
                 
@@ -31,5 +30,3 @@ imageAlt: This is a test
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia ea voluptatem ipsum, at aut officia
                 voluptas quidem nostrum quibusdam sapiente placeat perspiciatis, iusto totam repellat qui quas amet
                 itaque et.
-
-

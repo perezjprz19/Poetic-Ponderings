@@ -11,62 +11,26 @@ layout: 'base.njk'
 
             <div class="headline-banner">
                 <h3 class="headline fancy-border">
-                    <span class="place-items-center">Poem of the Day</span>
+                    <span class="place-items-center">Quote of the Day</span>
                 </h3>
 
-                 <span class="headline-description">Apple Announces a New Partnership...</span>
+                 <span class="headline-description" id = "zenQuote">Apple Announces a New Partnership...</span>
 
             </div>
 
-              <a href="{{ post.url }}" class="article featured-article featured-article-1">
-                <img src="./assets/images/featured/featured-1.jpg" alt="" class="article-image">
-                <span class="article-category">Poetry</span>
-
-                <div class="article-data-container">
-                    <div class="article-data">
-                        <span>Dec 24, 2021</span>
-                        <span class="article-data-spacer"></span>
-                        <span>4 min read</span>
-                    </div>
-                    <h3 class="title article-title">Is VR the Future?</h3>
-                </div>
-            </a>
-
-            <a href="{{ post.url }}" class="article featured-article featured-article-2">
-                <img src="./assets/images/featured/featured-2.jpg" alt="" class="article-image">
-                <span class="article-category">Short Stories</span>
-                <div class="article-data-container">
-                    <div class="article-data">
-                        <span>Dec 04, 2021</span>
-                        <span class="article-data-spacer"></span>
-                        <span> 4 min read </span>
-                    </div>
-                    <h3 class="title article-title">Fine Dining</h3>
-                </div>
-            </a>
-
-            <a href="{{ post.url }}" class="article featured-article featured-article-3">
-                <img src="./assets/images/featured/featured-3.jpg" alt="" class="article-image">
-                <span class="article-category">Articles</span>
-
-                <div class="article-data-container">
-                    <div class="article-data">
-                        <span>Dec 04, 2021</span>
-                        <span class="article-data-spacer"></span>
-                        <span>4 min read</span>
-                    </div>
-                    <h3 class="title article-title">Fat Burning 101</h3>
-                </div>
-            </a>
+            {# loops over the featured articles using the tags, but I need to make sure each article type gets assigned one specific tag. Featured cannot also have post and vice-versa #}
+              {%- for featured in collections.featured -%}
+              {% include 'featured.njk'%}
+              {%- endfor -%} 
         </div>
 
       
 
-        <!--Sidebar-->
+        <!--Sidebar/Recents-->
         <div class="sidebar d-grid">
             <h3 class="title featured-content-title">Recent Posts</h3>
-
-            {%- for post in collections.post | reverse -%}
+ {# loops over the recent articles sidebar using the tags, but I need to make sure each article type gets assigned one specific tag. Featured articles cannot also have post and vice-versa #}
+            {%- for recent in collections.recent | reverse -%}
                 {% include 'recent-posts.njk'%}
 
             {%- endfor -%}
@@ -322,8 +286,9 @@ layout: 'base.njk'
         </div>
     </div>
 </section>
-<!-- Popular tags -->
 
+<!-- Popular tags -->
+{# 
 <section class="popular-tags section">
     <div class="container">
         <h2 class="title section-title" data-name="Popular Tags"> Popular Tags</h2>
@@ -337,7 +302,7 @@ layout: 'base.njk'
                 <img src="./assets/images/tags/food-tag.jpg" alt="" class="article-image">
             </a>
 
-            <a href="#" class="article"> <span class="tag-name">#Technolog</span>
+            <a href="#" class="article"> <span class="tag-name">#Technology</span>
                 <img src="./assets/images/tags/technology-tag.jpg" alt="" class="article-image">
             </a>
 
@@ -355,7 +320,7 @@ layout: 'base.njk'
 
         </div>
     </div>
-</section>
+</section> #}
 
 <!-- Newsletter -->
 
@@ -365,7 +330,7 @@ layout: 'base.njk'
 
         <div class="form-container-inner">
             <h6 class="title newsletter-title">Subscribe to Poetic Ponderings</h6>
-            <p class="newsletter description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p class="newsletter description">Embrace the magic of verse, a monthly poem awaits!</p>
 
             <form action="" class="form">
                 <input type="text" placeholder="Enter your email address" class="form-input">
@@ -378,8 +343,3 @@ layout: 'base.njk'
         </div>
     </div>
 </section>
-
-<!-- Swiper.js -->
-<script src="./assets/js/swiper-bundle.min.js"></script>
-<!-- Custom script -->
-<script src="./assets/js/main.js"></script>

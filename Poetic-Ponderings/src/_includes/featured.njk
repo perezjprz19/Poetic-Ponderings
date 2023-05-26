@@ -1,0 +1,17 @@
+{# feeds the data to loop over the featured articles #}
+            
+             
+
+            <a href="{{ featured.url }}" class="article featured-article featured-article-{{featured.data.articleNumber}}">
+                <img src="{{featured.data.image}}" alt="" class="article-image">
+                <span class="article-category">{{featured.data.category}}</span>
+
+                <div class="article-data-container">
+                    <div class="article-data">
+                        <span>{{featured.data.date | postDate}}</span>
+                        <span class="article-data-spacer"></span>
+                        <span>{{featured.data.author}}</span>
+                    </div>
+                    <h3 class="title article-title">{{featured.data.title}}</h3>
+                </div>
+            </a>

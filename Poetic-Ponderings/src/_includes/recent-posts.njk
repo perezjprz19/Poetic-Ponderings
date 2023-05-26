@@ -1,25 +1,25 @@
 <!--Recent Posts-->                
-                
-                <a href="{{ post.url }}" class="trending-news-box">
+                <!--gathers the data for the recent posts (sidebar) section of the website-->
+                <a href="{{ recent.url }}" class="trending-news-box">
 
                     <div class="trending-news-image-box">
-                         <span class="trending-number place-items-center"> {{ post.data.articleNumber }} </span>
+                         <span class="trending-number place-items-center"> {{ recent.data.articleNumber }} </span>
 
-                        <img src="{{ post.data.image }}" alt="{{post.data.imageAlt}}" class="article-image">
+                        <img src="{{ recent.data.image }}" alt="{{ recent.data.imageAlt}}" class="article-image">
                         
                     </div>
 
                     <div class="trending-news-data">
 
                         <h3 class="title article-title">
-                                {{ post.data.title }}
+                                {{ recent.data.title }}
                          </h3>
 
                         <div class="article-data">
                             
-                            <span>{{ post.data.date | postDate}}</span>
+                            <span>{{ recent.data.date | postDate}}</span>
                             <span class="article-data-spacer"></span>
-                            <span>{{ post.data.author }}</span>
+                            <span>{{ recent.data.author }}</span>
                         </div>
 
                    

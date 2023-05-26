@@ -1,10 +1,10 @@
 ---
-title: My Fourth Poem
+title: My Third Poem
 author: Ember R.
-articleNumber: 04
-date: 2023-05-24
-tags: post
-image: /assets/images/trending/trending_4.jpg
+articleNumber: 03
+tags: recent
+date: 2023-05-23
+image: /assets/images/trending/trending_3.jpg
 imageAlt: This is a test
 ---
 

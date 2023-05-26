@@ -614,6 +614,7 @@ body.light-theme {
     display: flex;
     flex-direction: column;
     order: 1;
+    margin-top: 6rem;
 }
 
 .company-description {
@@ -761,6 +762,8 @@ body.light-theme {
         max-width: 40rem;
     }
 
+ 
+
     .popular-tags-container, 
     .footer-container {
         grid-template-columns: repeat(2, 1fr);
@@ -831,6 +834,10 @@ body.light-theme {
     .blog-post-data img {
         height: var(--item-min-height-md);
     }
+.company-data {
+    margin-top: 0;
+}
+
 
 }
 
@@ -878,6 +885,7 @@ body.light-theme {
     align-items:center;
 
 }
+
 
 .company-description {
     max-width: 100%;
